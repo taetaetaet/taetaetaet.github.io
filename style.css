@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8); /* 반투명 검은색 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+#clock {
+    position: absolute;
+    top: 5%; /* 중앙 위쪽 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em; /* 크게 조정 */
+}
+
+#greeting {
+    position: absolute;
+    top: 15%; /* 시계 아래에 위치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em; /* 시계보다 작게 */
+}
+
+input[type="text"] {
+    width: 300px; /* 투두리스트 입력란 크기 증가 */
+    padding: 12px; /* 패딩 증가 */
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px; /* 둥근 모서리 */
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
+    color: black;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* 포커스 시 그림자 */
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px; /* 둥근 모서리 */
+    background-color: #28a745; /* 초록색 */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* 호버 시 색상 변경 */
+}
+
+#todo-form {
+    position: absolute;
+    top: 35%; /* 시계와 greeting 사이에 위치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
+}
+
+#todo-list {
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+#todo-list li {
+    display: flex; /* X 버튼과 텍스트가 같은 줄에 배치 */
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* 하단 경계선 */
+}
+
+button {
+    background: none;
+    border: none;
+    color: red; /* X 버튼 색상 */
+    font-size: 1.2em; /* X 버튼 크기 */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    color: darkred; /* 호버 시 색상 변경 */
+}
+
+#quote {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#weather {
+    position: absolute;
+    top: 5%; /* 오른쪽 위쪽에 배치 */
+    right: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: right; /* 오른쪽 정렬 */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+.hidden {
+    display: none;
+  }
